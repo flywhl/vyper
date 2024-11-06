@@ -1,0 +1,36 @@
+[project]
+name = "vyper"
+version = "0.1.0"
+description = "Add your description here"
+authors = [
+    { name = "Rory Byrne", email = "rory@rory.bio" }
+]
+dependencies = [
+    "pyyaml>=6.0.2",
+    "lark>=1.2.2",
+    "pydantic>=2.9.2",
+    "pydantic-settings>=2.6.1",
+]
+readme = "README.md"
+requires-python = ">= 3.8"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = [
+    "coverage>=7.6.4",
+    "pre-commit>=4.0.1",
+    "tox>=4.23.2",
+    "pyright>=1.1.388",
+    "black>=24.10.0",
+    "ruff>=0.7.2",
+]
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["vyper"]
